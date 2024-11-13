@@ -13,3 +13,5 @@ public:
         return true;
     }
 };
+tc:O(n)
+sc:O(1)
