@@ -1,3 +1,36 @@
+string longestCommonPrefix(vector<string> &arr, int n)
+{
+    if (n == 0) return "";
+    string prefix = "";
+
+    for (int i = 0; i < arr[0].size(); ++i) {
+        char current_char = arr[0][i];
+
+        for (int j = 1; j < n; ++j) {
+            if (i >= arr[j].size() || arr[j][i] != current_char) {
+                return prefix;
+            }
+        }
+
+        prefix += current_char;
+    }
+
+    return prefix;
+}
+
+/*
+TC:O(n^2)
+SC:O(n)
+*/
+
+
+
+
+
+
+
+
+-------------------------------------------------*********************************-----------------------
 #include <string>
 #include <vector>
 using namespace std;
